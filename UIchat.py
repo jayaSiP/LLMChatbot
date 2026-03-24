@@ -32,12 +32,16 @@ st.caption("Choose AI personality and start chatting | Type 0 to stop")
 # ---------------- MODE SELECTION ----------------
 mode_choice = st.radio(
     "Choose your AI Mode:",
-    ["😡 Angry", "😂 Funny", "😢 Sad"],
+    ["😐 Normal", "😊 Happy", "😡 Angry", "😂 Funny", "😢 Sad"],
     horizontal=True
 )
 
 # Map mode
-if mode_choice == "😡 Angry":
+if mode_choice == "😐 Normal":
+    mode = "You are a helpful, neutral AI assistant. Respond clearly and professionally."
+elif mode_choice == "😊 Happy":
+    mode = "You are a cheerful and friendly AI assistant. Respond in a positive, encouraging, and warm tone."
+elif mode_choice == "😡 Angry":
     mode = "You are an angry AI agent. You respond aggressively and impatiently."
 elif mode_choice == "😂 Funny":
     mode = "You are a very funny AI agent. You respond with humor and jokes."
